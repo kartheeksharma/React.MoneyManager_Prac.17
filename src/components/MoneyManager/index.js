@@ -115,8 +115,8 @@ class MoneyManager extends Component {
   render() {
     const {titleInput, amountInput, optionId, transactionsList} = this.state
     const balanceAmount = this.getBalance()
-    const incomeAmount = this.incomeAmount()
-    const expensesAmount = this.expensesAmount()
+    const incomeAmount = this.getIncome()
+    const expensesAmount = this.getExpenses()
 
     return (
       <div className="app-cont">
@@ -173,7 +173,7 @@ class MoneyManager extends Component {
                   </option>
                 ))}
               </select>
-              <button type="button" className="add-btn">
+              <button type="submit" className="add-btn">
                 Add
               </button>
             </form>
